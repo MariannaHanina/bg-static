@@ -57,18 +57,18 @@
   </div>
 
 <div class="container">
-  <h2>Add User to Groups</h2>
-    <form class="mt-5" id="addGroups">
+  <h2>Add Clasters to User</h2>
+    <form class="mt-5" id="addClusters">
       <div class="form-group">
-        <label for="groups">Select Groups</label>
-        <select class="custom-select" id="groups" multiple name="groups">
+        <label for="userName">Select Clasters</label>
+        <select class="custom-select" multiple name="clusters">
           <option selected>Open this select menu</option>
-          <option value="group1">One</option>
-          <option value="group2">Two</option>
-          <option value="group3">Three</option>
+          <option value="cluster1">jarvis-nonprod-us-east-1-integration</option>
+          <option value="cluster2">jarvis-nonprod-us-east-1-test-1</option>
+          <option value="cluster3">jarvis-nonprod-us-east-1-test-2</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary" id="saveGroups">Next step</button>
+      <button type="submit" class="btn btn-primary" id="saveClusters">Save</button>
     </form>
   </div>
 </div>
@@ -79,8 +79,8 @@
 <script src="js/form.js"></script>
 <script>
   $(document).ready(function () {
-    new Form('#addGroups', '#saveGroups', () => {
-      location.href = "addClustersToUser.html";
+    new Form('#addClusters', '#saveClusters', () => {
+      location.href = "index.html";
     });
   });
 </script>

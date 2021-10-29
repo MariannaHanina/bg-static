@@ -57,7 +57,7 @@
   </div>
 
 <div class="container">
-  <h2>Create Cognito User - Step 1.</h2>
+  <h2>Create Cognito User</h2>
     <form class="mt-5" id="createUser">
       <div class="form-group">
         <label for="userName">User name</label>
@@ -98,28 +98,11 @@
   <div class="container">
   </div>
 </div>
+<script src="js/form.js"></script>
 <script>
-
   $(document).ready(function () {
-    $('#saveUser').on('click', e => {
-      const form = $('#createUser');
-      const formHTMLElement = form.get(0);
-      const values = {};
-
-      if (formHTMLElement.checkValidity()) {
-        const formElements = Array.from(formHTMLElement);
-
-        formElements.forEach((el) => {
-          if (el.tagName.toLowerCase() == 'button') return;
-          values[el.name] = $(el).val()
-        });
-
-        form.submit();
-        location.href = "addGroupsToUser.html";
-      }
-
-      e.preventDefault();
-      form.addClass('was-validated');
+    new Form('#createUser', '#saveUser', () => {
+      location.href = "addGroupsToUser.html";
     });
   });
 </script>
