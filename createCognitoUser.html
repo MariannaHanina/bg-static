@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>babyGroot</title>
+    <link type="text/css" rel="stylesheet" href="css/tailwind.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/global.css"/>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/global.js"></script>
+    <script async defer src="js/github-buttons.js"></script>
+
+</head>
+<body>
+  <div class="pb-2 mt-5 mb-4 border-bottom border-secondary">
+    <div class="container">
+        <div class="container-fluid pl-0">
+            <div id="header-title-line" class="row">
+                <div id="logo" class="col-md-1">
+                    <img alt="logo" height="100%" src="images/baby-groot-alt.png" align="right"/>
+                </div>
+                <div id="title" class="col-md-10">
+                    <h1 class="app-name brand mb-0">
+                        <a href="/">Baby Groot</a>
+                    </h1>
+                </div>
+                <div id="github-star" class="col-md-1">
+                    <a class="button" href="https://grafana.dtciqa.technology/d/null/qa-overview?orgId=1" data-show-count="false"
+                       aria-label="Jarvis Baby Groot on Disney Gitlab" data-color-schemhe="dark">observability</a>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        setTimeout(function() { restyle(0); });
+                    });
+                    function restyle(retries) {
+                        var githubStarSpan = document.querySelector('#github-star span');
+                        if (githubStarSpan != null) {
+                            var shadowRoot = githubStarSpan.shadowRoot;
+                            shadowRoot.querySelector('.btn')
+                                .setAttribute('style', 'color:#00f0fe; background-image:none; background-color:#222; border-color:#222');
+                            shadowRoot.querySelector('.social-count')
+                                .setAttribute('style', 'color:#222; background-image:none; background-color:#00f0fe; border-color:#00f0fe');
+                            shadowRoot.querySelector('.social-count b')
+                                .setAttribute('style', 'border-right-color:#00f0fe');
+                            shadowRoot.querySelector('.social-count i')
+                                .setAttribute('style', 'border-right-color:#00f0fe');
+                        } else {
+                            setTimeout(function() { restyle(retries + 1); }, retries * 10);
+                        }
+                    }
+                </script>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<div class="container">
+  <h2>Create Cognito User - Step 1.</h2>
+    <form class="mt-5" id="createUser">
+      <div class="form-group">
+        <label for="userName">User name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="userName"
+          name="username"
+          required
+        />
+        <div class="invalid-feedback">
+          Please provide a user name.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Temporary Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+        >
+      </div>
+      <button type="submit" class="btn btn-primary" id="saveUser">Next step</button>
+    </form>
+  </div>
+</div>
+<div class="pb-0 mt-5 mb-4">
+  <div class="container">
+  </div>
+</div>
+<script>
+
+  $(document).ready(function () {
+    $('#saveUser').on('click', e => {
+      const form = $('#createUser');
+      const formHTMLElement = form.get(0);
+      const values = {};
+
+      if (formHTMLElement.checkValidity()) {
+        const formElements = Array.from(formHTMLElement);
+
+        formElements.forEach((el) => {
+          if (el.tagName.toLowerCase() == 'button') return;
+          values[el.name] = $(el).val()
+        });
+
+        form.submit();
+        location.href = "addGroupsToUser.html";
+      }
+
+      e.preventDefault();
+      form.addClass('was-validated');
+    });
+  });
+</script>
+</body>
+</html>

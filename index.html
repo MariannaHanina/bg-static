@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>babyGroot</title>
+    <link type="text/css" rel="stylesheet" href="css/tailwind.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/global.css"/>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/global.js"></script>
+    <script async defer src="js/github-buttons.js"></script>
+
+</head>
+<body>
+  <div class="pb-2 mt-5 mb-4 border-bottom border-secondary">
+    <div class="container">
+        <div class="container-fluid pl-0">
+            <div id="header-title-line" class="row">
+                <div id="logo" class="col-md-1">
+                    <img alt="logo" height="100%" src="images/baby-groot-alt.png" align="right"/>
+                </div>
+                <div id="title" class="col-md-10">
+                    <h1 class="app-name brand mb-0">
+                        <a href="/">Baby Groot</a>
+                    </h1>
+                </div>
+                <div id="github-star" class="col-md-1">
+                    <a class="button" href="https://grafana.dtciqa.technology/d/null/qa-overview?orgId=1" data-show-count="false"
+                       aria-label="Jarvis Baby Groot on Disney Gitlab" data-color-schemhe="dark">observability</a>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        setTimeout(function() { restyle(0); });
+                    });
+                    function restyle(retries) {
+                        var githubStarSpan = document.querySelector('#github-star span');
+                        if (githubStarSpan != null) {
+                            var shadowRoot = githubStarSpan.shadowRoot;
+                            shadowRoot.querySelector('.btn')
+                                .setAttribute('style', 'color:#00f0fe; background-image:none; background-color:#222; border-color:#222');
+                            shadowRoot.querySelector('.social-count')
+                                .setAttribute('style', 'color:#222; background-image:none; background-color:#00f0fe; border-color:#00f0fe');
+                            shadowRoot.querySelector('.social-count b')
+                                .setAttribute('style', 'border-right-color:#00f0fe');
+                            shadowRoot.querySelector('.social-count i')
+                                .setAttribute('style', 'border-right-color:#00f0fe');
+                        } else {
+                            setTimeout(function() { restyle(retries + 1); }, retries * 10);
+                        }
+                    }
+                </script>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<div class="container">
+  <h2>Jarvis Clusters</h2>
+  <div id="clusters" class="grid grid-cols-4 gap-9 mt-5 mb-16">
+    <div class="card max-w-max relative">
+      <div class="card-title h-20 bg-white text-black p-3 mb-0 text-center">jarvis-nonprod-us-east-1-integration</div>
+      <div class="card-body bg-black absolute top-20 z-50 hidden">
+        <ul class="mb-0 text-sm">
+          <li class="mb-2">
+            <i class="fa fa-database mr-1"></i> Total topics: <span class="font-bold">510</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-pie-chart mr-1"></i> Total partitions: <span class="font-bold">1915</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-trophy mr-1"></i> Total preferred partition leader: <span class="font-bold">100%</span>
+          </li>
+          <li>
+            <i class="fa fa-heartbeat mr-1"></i> Total under-replicated partitions: <span class="font-bold">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card max-w-max relative">
+      <div class="card-title h-20 bg-white text-black p-3 mb-0 text-center">jarvis-nonprod-us-east-1-integration</div>
+      <div class="card-body bg-black absolute top-20 z-50 hidden">
+        <ul class="mb-0 text-sm">
+          <li class="mb-2">
+            <i class="fa fa-database mr-1"></i> Total topics: <span class="font-bold">510</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-pie-chart mr-1"></i> Total partitions: <span class="font-bold">1915</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-trophy mr-1"></i> Total preferred partition leader: <span class="font-bold">100%</span>
+          </li>
+          <li>
+            <i class="fa fa-heartbeat mr-1"></i> Total under-replicated partitions: <span class="font-bold">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card max-w-max relative">
+      <div class="card-title h-20 bg-white text-black p-3 mb-0 text-center">jarvis-nonprod-us-east-1-integration</div>
+      <div class="card-body bg-black absolute top-20 z-50 hidden">
+        <ul class="mb-0 text-sm">
+          <li class="mb-2">
+            <i class="fa fa-database mr-1"></i> Total topics: <span class="font-bold">510</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-pie-chart mr-1"></i> Total partitions: <span class="font-bold">1915</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-trophy mr-1"></i> Total preferred partition leader: <span class="font-bold">100%</span>
+          </li>
+          <li>
+            <i class="fa fa-heartbeat mr-1"></i> Total under-replicated partitions: <span class="font-bold">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card max-w-max relative">
+      <div class="card-title h-20 bg-white text-black p-3 mb-0 text-center">jarvis-nonprod-us-east-1-integration</div>
+      <div class="card-body bg-black absolute top-20 z-50 hidden">
+        <ul class="mb-0 text-sm">
+          <li class="mb-2">
+            <i class="fa fa-database mr-1"></i> Total topics: <span class="font-bold">510</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-pie-chart mr-1"></i> Total partitions: <span class="font-bold">1915</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-trophy mr-1"></i> Total preferred partition leader: <span class="font-bold">100%</span>
+          </li>
+          <li>
+            <i class="fa fa-heartbeat mr-1"></i> Total under-replicated partitions: <span class="font-bold">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card max-w-max relative">
+      <div class="card-title h-20 bg-white text-black p-3 mb-0 text-center">jarvis-nonprod-us-east-1-integration</div>
+      <div class="card-body bg-black absolute top-20 z-50 hidden">
+        <ul class="mb-0 text-sm">
+          <li class="mb-2">
+            <i class="fa fa-database mr-1"></i> Total topics: <span class="font-bold">510</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-pie-chart mr-1"></i> Total partitions: <span class="font-bold">1915</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-trophy mr-1"></i> Total preferred partition leader: <span class="font-bold">100%</span>
+          </li>
+          <li>
+            <i class="fa fa-heartbeat mr-1"></i> Total under-replicated partitions: <span class="font-bold">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card max-w-max relative">
+      <div class="card-title h-20 bg-white text-black p-3 mb-0 text-center">jarvis-nonprod-us-east-1-integration</div>
+      <div class="card-body bg-black absolute top-20 z-50 hidden">
+        <ul class="mb-0 text-sm">
+          <li class="mb-2">
+            <i class="fa fa-database mr-1"></i> Total topics: <span class="font-bold">510</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-pie-chart mr-1"></i> Total partitions: <span class="font-bold">1915</span>
+          </li>
+          <li class="mb-2">
+            <i class="fa fa-trophy mr-1"></i> Total preferred partition leader: <span class="font-bold">100%</span>
+          </li>
+          <li>
+            <i class="fa fa-heartbeat mr-1"></i> Total under-replicated partitions: <span class="font-bold">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3>Cognito Users</h3>
+    <table class="users table mt-4">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Username
+            <input
+              id='filter'
+              size=25 
+              name='searchRow'
+              title='Just type to filter the rows'
+              class="ml-2"
+            />
+          </th>
+          <th scope="col">Enabled</th>
+          <th scope="col">Status</th>
+          <th scope="col">Updated</th>
+          <th scope="col">Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="user">
+          <th scope="row">1</th>
+          <td class="user-name">User 1</td>
+          <td>Enabled</td>
+          <td>Confirmed</td>
+          <td>Thu Oct 28 2021 12:33:19 GMT+0300</td>
+          <td>Thu Oct 28 2021 12:33:19 GMT+0300</td>
+        </tr>
+        <tr class="user">
+          <th scope="row">2</th>
+          <td class="user-name">User 2</td>
+          <td>Enabled</td>
+          <td>Confirmed</td>
+          <td>Thu Oct 28 2021 12:33:19 GMT+0300</td>
+          <td>Thu Oct 28 2021 12:33:19 GMT+0300</td>
+        </tr>
+        <tr class="user">
+          <th scope="row">3</th>
+          <td class="user-name">Momy</td>
+          <td>Enabled</td>
+          <td>Confirmed</td>
+          <td>Thu Oct 28 2021 12:33:19 GMT+0300</td>
+          <td>Thu Oct 28 2021 12:33:19 GMT+0300</td>
+        </tr>
+      </tbody>
+    </table>
+    <button
+      type="button"
+      class="btn btn-light"
+      id="add-user"
+    >
+      Add User
+    </button>
+  </div>
+</div>
+<div class="pb-0 mt-5 mb-4">
+  <div class="container">
+  </div>
+</div>
+<script>
+  function Card (parentSelector) {
+    const cardSelector = '.card';
+    const cardBodySelector = '.card-body';
+    const cardTitleSelector = '.card-title';
+
+    const getBody = (e) => {
+      const title = e.target;
+      return $(title).next(cardBodySelector);
+    }
+
+    const showBody = (e) => {
+      const body = getBody(e);
+      body.show();
+    };
+
+    const hideBody = (e) => {
+      const body = getBody(e);
+      body.hide();
+    };
+
+    this.card = $(parentSelector).find(cardSelector);
+    this.cardBody = this.card.find(cardBodySelector);
+    this.cardTitle = this.card.find(cardTitleSelector);
+    
+    this.cardBody.hide();
+
+    this.cardTitle
+      .on('mouseover', showBody)
+      .on('mouseout', hideBody);
+  }
+
+  function Users () {
+    const usersSelector = '.users';
+    const userSelector = '.user';
+    const userNameSelector = '.user-name';
+
+    const users = $(usersSelector).find(userSelector);
+    const userNames = users.find(userNameSelector);
+
+    const checkName = (name, filterName) => {
+      const formatedName = name.innerText.toLowerCase();
+      const formatedFilterName = filterName.toLowerCase();
+      return formatedName.includes(formatedFilterName);
+    }
+
+    this.filterByName = (name) => {
+      users.hide();
+      const filteredUsers = userNames.filter((index, userName) => checkName(userName, name));
+      filteredUsers.parent(userSelector).show();
+    }
+  }
+
+  $(document).ready(function () {
+    new Card('#clusters');
+    const users = new Users();
+
+    $('#filter').on('change', e => {
+      const name = $(e.target).val();
+      users.filterByName(name);
+    });
+    
+    $("#add-user").click(e => location.href = "createCognitoUser.html");
+  });
+</script>
+</body>
+</html>
